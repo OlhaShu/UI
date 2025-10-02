@@ -1,0 +1,173 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>🎨 UI Design Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="file" id="fileInput" accept="image/png, image/jpg, image/jpeg" style="display: none;">
+
+    <div>
+        <h1>🎨 UI Design Analyzer</h1>
+        <p>Завантажте дизайн для аналізу фокусу, чіткості, композиції та сліпих зон</p>
+    </div>
+
+    <div class="upload-area">
+        <p>📤</p>
+        <p>Завантажте UI дизайн</p>
+        <p>Натисніть або перетягніть зображення (PNG, JPG, JPEG)</p>
+    </div>
+
+    <div>
+        <div>
+            <p>💎 Focus Score ❓</p>
+            <div>
+                <p>Загальний бал</p>
+                <p id="focus-total">-</p>
+                <p>з 100</p>
+            </div>
+            <div>
+                <p id="focus-concentration">Концентрація уваги -</p>
+            </div>
+            <div>
+                <p id="focus-distribution">Розподіл елементів -</p>
+            </div>
+        </div>
+
+        <div>
+            <p>✨ Clarity Score ❓</p>
+            <div>
+                <p>Оцінка чіткості</p>
+                <p id="clarity-total">-</p>
+                <p>з 100</p>
+            </div>
+            <div>
+                <p id="clarity-visual">Візуальна чіткість -</p>
+            </div>
+            <div>
+                <p id="clarity-structure">Структурованість -</p>
+            </div>
+        </div>
+
+        <div>
+            <p>🖼️ Composition Score ❓</p>
+            <div>
+                <p>Оцінка композиції</p>
+                <p id="composition-total">-</p>
+                <p>з 100</p>
+            </div>
+            <div>
+                <p id="composition-balance">Баланс уваги -</p>
+            </div>
+            <div>
+                <p id="composition-rule">Відповідність правилу третин -</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <p>📈 Percentage of Attention ❓</p>
+        <div>
+            <p>Верхня третина (Primary)</p>
+            <div>
+                <p id="percent-top">32.5%</p>
+                <p id="top-example">Приклад: Прийнятний</p>
+            </div>
+        </div>
+
+        <div>
+            <p>Середня третина (Secondary)</p>
+            <div>
+                <p id="percent-middle">34.9%</p>
+                <p id="middle-example">Приклад: Найвищий показник</p>
+            </div>
+        </div>
+
+        <div>
+            <p>Нижня третина (Tertiary)</p>
+            <div>
+                <p id="percent-bottom">32.6%</p>
+                <p id="bottom-example">Приклад: Підвищений</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <p id="focus-title">📝 Детальний Аналіз Фокусу (Focus Score: -)</p>
+            <p>▼</p>
+        </div>
+        <p id="detail-focus">Завантажте зображення, щоб згенерувати повний звіт.</p>
+    </div>
+
+    <div>
+        <div>
+            <p id="clarity-title">📝 Детальний Аналіз Чіткості (Clarity Score: -)</p>
+            <p>▼</p>
+        </div>
+        <p id="detail-clarity">Завантажте зображення, щоб згенерувати повний звіт.</p>
+    </div>
+
+    <div>
+        <div>
+            <p id="composition-title">📝 Детальний Аналіз Композиції (Composition Score: -)</p>
+            <p>▼</p>
+        </div>
+        <p id="detail-composition">Завантажте зображення, щоб згенерувати повний звіт.</p>
+    </div>
+
+    <div>
+        <div>
+            <p>📝 Детальний Аналіз Розподілу Уваги</p>
+            <p>▼</p>
+        </div>
+        <p id="detail-attention">Завантажте зображення, щоб згенерувати повний звіт про композицію та ієрархію уваги.</p>
+    </div>
+
+    <div>
+        <div>
+            <p>🗺️ Focus Map (З сіткою) ❓</p>
+            <img id="focus-map-img">
+            <div>
+                <div><div></div>Висока увага</div>
+                <div><div></div>Середня увага</div>
+                <div><div></div>Низька увага</div>
+                <div>– – – Сітка Правила Третин</div>
+            </div>
+        </div>
+
+        <div>
+            <p>🎨 Contrast Map (З сіткою) ❓</p>
+            <img id="contrast-map-img">
+            <div>
+                <div><div></div>Високий контраст</div>
+                <div><div></div>Середній контраст</div>
+                <div><div></div>Низький контраст</div>
+                <div>– – – Сітка Правила Третин</div>
+            </div>
+        </div>
+
+        <div>
+            <p>⚫ Blind Spots Map (З сіткою) ❓</p>
+            <img id="blind-map-img">
+            <div>
+                <div><div></div>Зона низького фокусу (Сліпа зона)</div>
+                <div><div></div>Решта дизайну</div>
+                <div>– – – Сітка Правила Третин</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div>×</div>
+    </div>
+
+    <div>
+        <div>×</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
